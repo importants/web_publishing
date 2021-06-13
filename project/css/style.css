@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Noto";
+    src: url("../font/NotoSansCJKkr-Regular.otf");
+}
+
+body {
+    font-family: "Noto";
+    letter-spacing: -2.5%;
+    min-width: 1900px;
+    max-width: 2200px;
+}

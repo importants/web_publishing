@@ -1,0 +1,839 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.txt {
+  color: #5B5B5B;
+}
+
+.txt h1 {
+  font-size: 32px;
+  color: #505050;
+}
+
+.txt span.mColor {
+  color: #1C7DEF;
+}
+
+.txt span.red {
+  color: #C30C0C;
+}
+
+.hide {
+  position: absolute;
+  top: 0;
+  left: -10000000px;
+}
+
+.lnb li a {
+  display: block;
+  height: 81px;
+  padding: 0 35px;
+  font-size: 17px;
+  color: #333;
+  line-height: 81px;
+}
+
+.lnb li a:hover {
+  color: #1C7DEF;
+  font-weight: bold;
+}
+
+.lnb li a:hover span:after {
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  content: "";
+  height: 1px;
+  background: #1C7DEF;
+  width: 100%;
+}
+
+.lnb li a span {
+  position: relative;
+}
+
+header {
+  z-index: 100;
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+header:hover {
+  background: white;
+}
+
+header h1 {
+  position: absolute;
+  left: 300px;
+  top: 0;
+  padding: 14px 0 0;
+}
+
+header h1 a {
+  display: block;
+  width: 110px;
+  height: 60px;
+  color: transparent;
+  background: url(../img/logo.png) no-repeat;
+  background-size: 60px 60px;
+}
+
+header .lnb li {
+  display: inline-block;
+}
+
+header .spot {
+  position: absolute;
+  right: 300px;
+  top: 0;
+}
+
+header .spot li {
+  position: relative;
+  float: left;
+}
+
+header .spot li a {
+  display: block;
+  height: 81px;
+  padding: 0 10px;
+  line-height: 81px;
+}
+
+header .spot li:last-child a {
+  padding-right: 0;
+}
+
+header .spot li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1px;
+  height: 7px;
+  float: left;
+  background: #ccc;
+}
+
+header .spot li:first-child:after {
+  display: none;
+}
+
+.visual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 800px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 300px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.visual .con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.visual .con .txt {
+  font-size: 48px;
+  text-align: left;
+  list-style: 24px;
+  font-weight: 900;
+}
+
+.visual .con .txt .mColor {
+  font-size: 56px;
+}
+
+.visual .con img {
+  width: 500px;
+  height: 400px;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+  height: 1500px;
+}
+
+.search .background {
+  background: #1C7DEF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 300px;
+  padding-top: 100px;
+  height: 1200px;
+}
+
+.search .background .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 45px 113px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 524px;
+  background: white;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.search .background .top .mTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search .background .top .mTop .txt {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.search .background .top .mBot {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.search .background .top .mBot input {
+  width: 91%;
+  height: 70px;
+  border-radius: 35px;
+  border: 1px solid #cacaca;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 100px;
+  padding-top: 8px;
+  font-size: 20px;
+}
+
+.search .background .top .mBot input::-webkit-input-placeholder {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.search .background .top .mBot input:-ms-input-placeholder {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.search .background .top .mBot input::-ms-input-placeholder {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.search .background .top .mBot input::placeholder {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.search .background .top .mBot input:focus {
+  outline: none;
+  background: #f7f7f7;
+}
+
+.search .background .top .mBot a button {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: url(../img/SearchBtn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+}
+
+.search .background .top .mBot a button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.search .background .top .mBot a:hover button::after {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.search .bottom {
+  position: absolute;
+  top: 700px;
+  left: 0;
+  margin-top: 100px;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+.search .bottom .slide .control {
+  bottom: 10px;
+}
+
+.search .bottom .slide .prev {
+  left: 50%;
+  margin: 26px 0 0 -640px;
+}
+
+.search .bottom .slide .next {
+  right: 50%;
+  margin: 26px -640px 0 0;
+}
+
+.search .bottom > .txt {
+  width: 100%;
+  margin: 0 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.search .bottom > .txt h2 {
+  display: block;
+  font-size: 32px;
+  color: #f0f0f0;
+}
+
+.search .bottom .question {
+  position: relative;
+  width: 100%;
+  /*스크립트가 적용되면 삭제될 */
+}
+
+.search .bottom .question > a {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 750px;
+  height: 450px;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px;
+}
+
+.search .bottom .question > a::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  width: 750px;
+  height: 450px;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.search .bottom .question > a:hover::after {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.search .bottom .question > a:nth-child(1) {
+  margin-left: -1200px;
+  background: url(../img/1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.search .bottom .question > a:nth-child(2) {
+  background: url(../img/2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.search .bottom .question > a:nth-child(3) {
+  margin-left: 1200px;
+  background: url(../img/3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.search .bottom .question > a .txt {
+  position: relative;
+  top: -25px;
+  z-index: 10;
+  margin: 50px;
+  font-size: 20px;
+  color: #cacaca;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.search .bottom .question > a .txt span {
+  line-height: 60px;
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.banner {
+  width: 100%;
+  margin-top: 100px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 300px;
+}
+
+.banner .con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 100px;
+  background: #C8E1FF;
+  height: 190px;
+  border-radius: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner .con .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.banner .con .left .txt {
+  color: #505050;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.banner .con .left .btn {
+  color: #5B5B5B;
+  margin-top: 20px;
+}
+
+.event {
+  margin-top: 200px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 300px;
+}
+
+.event .txt h1 {
+  font-size: 32px;
+  line-height: 50px;
+}
+
+.event .txt h2 {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.event ul {
+  margin-top: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+}
+
+.event ul a .list {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: black;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.event ul a .list::after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #5B5B5B;
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.event ul a:hover .list::after {
+  content: "더보기";
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.event ul li:nth-child(1) .list {
+  background: url(../img/4.png);
+  background-repeat: no-repeat;
+  background-size: 220px 220px;
+  background-position: center;
+}
+
+.event ul li:nth-child(2) .list {
+  background: url(../img/5.png);
+  background-repeat: no-repeat;
+  background-size: 220px 220px;
+  background-position: center;
+}
+
+.event ul li:nth-child(3) .list {
+  background: url(../img/6.png);
+  background-repeat: no-repeat;
+  background-size: 220px 220px;
+  background-position: center;
+}
+
+.event ul li:nth-child(4) .list {
+  background: url(../img/7.png);
+  background-repeat: no-repeat;
+  background-size: 220px 220px;
+  background-position: center;
+}
+
+.event ul li:nth-child(5) .list {
+  background: url(../img/8.png);
+  background-repeat: no-repeat;
+  background-size: 220px 220px;
+  background-position: center;
+}
+
+.event ul .txt {
+  text-align: center;
+}
+
+.event ul .txt h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.event ul .txt span {
+  margin-right: 20px;
+  font-size: 18px;
+  color: #ca0000;
+}
+
+.event ul .txt del {
+  color: #8f8f8f;
+}
+
+.info {
+  width: 100%;
+  height: 900px;
+  margin-top: 300px;
+  background: url(../img/back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info .txt {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.info .txt h1 {
+  font-size: 48px;
+  color: #e7e7e7;
+  line-height: 60px;
+}
+
+.info .txt h2 {
+  margin-top: 20px;
+  font-weight: 100;
+  font-size: 24px;
+  color: lightgray;
+  letter-spacing: 2px;
+}
+
+.info .txt button {
+  margin-top: 50px;
+  width: 330px;
+  height: 80px;
+  color: #1C7DEF;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: white;
+}
+
+.info .txt button:hover {
+  background: whitesmoke;
+}
+
+.info .txt button:active {
+  background: #dddddd;
+}
+
+.slide .prev,
+.slide .next {
+  display: block;
+  position: absolute;
+  top: 45%;
+  width: 25px;
+  height: 47px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../img/sp_com.png) no-repeat;
+  color: transparent;
+  z-index: 10;
+}
+
+.slide .prev {
+  left: 400px;
+  background-position: -128px -60px;
+}
+
+.slide .next {
+  right: 400px;
+  background-position: -158px -60px;
+}
+
+.slide .control {
+  position: absolute;
+  left: 0;
+  top: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.slide .control > div {
+  display: inline-block;
+  position: relative;
+  padding: 0 45px 0 0;
+}
+
+.slide .control > div > div {
+  position: absolute;
+  right: -30px;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 60px;
+  background: #4772ff;
+  border-radius: 30px;
+  height: 25px;
+}
+
+.slide .control > div > div a {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  background: url(../img/sp_com.png) no-repeat;
+}
+
+.slide .control > div > div a.on {
+  opacity: 1;
+}
+
+.slide .control > div > div a.off {
+  opacity: .5;
+}
+
+.slide .control > div > div a.pause {
+  background-position: -108px -60px;
+}
+
+.slide .control > div > div a.pause {
+  background-position: -108px -60px;
+  margin-left: 10px;
+}
+
+.slide .control > div > div a.play {
+  background-position: -106px -72px;
+}
+
+.slide .control ul {
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+  top: -7px;
+}
+
+footer {
+  width: 100%;
+  height: 500px;
+  background: #f7e5d1;
+}
+
+.slide .control ul,
+.slide .control li {
+  display: inline-block;
+  padding: 0 3px;
+}
+
+.slide .control li a {
+  display: block;
+  width: 50px;
+  height: 4px;
+  border: none;
+}
+
+/*블록 안 채우기*/
+.slide .control .on a {
+  background: #1C7DEF;
+}
+
+.slide .control .off a {
+  background: rgba(75, 75, 75, 0.5);
+}
+
+.slide .control a {
+  color: transparent;
+}
+/*# sourceMappingURL=index.css.map */
